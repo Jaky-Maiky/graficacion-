@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 
@@ -50,16 +51,16 @@
                     }
                }
                // shuffle the chosen tiles
-               for (i = 0; i < 96; i++) {
-                    var from = Math.floor(Math.random() * 48);
-                    var to = Math.floor(Math.random() * 48);
+               for (i = 0; i < 8; i++) {
+                    var from = Math.floor(Math.random() * 4);
+                    var to = Math.floor(Math.random() * 4);
                     var tmp = chosenTiles[from];
                     chosenTiles[from] = chosenTiles[to];
                     chosenTiles[to] = tmp;
                }
                // place down tiles
-               for (i = 0; i < 8; i++) {
-                    for (j = 0; j < 6; j++) {
+               for (i = 0; i < 4; i++) {
+                    for (j = 0; j < 4; j++) {
                          // new sprite
                          var tile = PIXI.Sprite.fromFrame(chosenTiles[i * 6 + j]);
                          // buttonmode+interactive = acts like a button
